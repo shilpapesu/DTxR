@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Digital Twin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./js/three/build/three.module.js",
+                "three/addons/": "./js/three/examples/jsm/"
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: monospace;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        Time: <span id="time">00:00:00</span><br>
+        AC: <span id="ac-state">OFF</span><br>
+        Window: <span id="window-state">CLOSED</span><br>
+        Temperature: <span id="temperature">--°C</span>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html> 
